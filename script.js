@@ -1,14 +1,11 @@
-const apiKey = '020afd8539254682ba614019eeb6e34c'
-const apiId = '30a288fb'
-const BASEID = 'https://trackapi.nutritionix.com/v2/search/instant?query='
-const header = document.querySelector('h1');
 
-const getBanana = async () => {
-  const response = await axios.get(`${BASEID}banana`, {
-    "x-app-id": apiId,
-    "x-app-key": apiKey,
-    "x-remote-user-id": 0
-  })
+const PATH = 'https://api.edamam.com/api/nutrition-data';
+const APP_ID = '76b45435';
+const APP_KEY = '2427510b4cb99441c4a8188e544c070d'
+const pulldata = async () => {
+  let response = await axios.get(`${PATH}?app_id=${APP_ID}&app_key=${APP_KEY}&ingr=one%20banana`)
+
   console.log(response);
+
 }
-getBanana();
+pulldata();
