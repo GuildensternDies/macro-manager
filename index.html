@@ -11,18 +11,34 @@
 </head>
 
 <body>
-  <h1>Macro Manager</h1>
-  <section class="macro-list">
-    <p>Macronutrient:</p>
-    <input id="macro" />
-    <p>Daily goal amount:</p>
-    <input id="goal" />
-    <select>
-      <option>Grams</option>
-      <option>Milligrams</option>
-    </select>
-    <button>Store Macro</button>
-  </section>
+  <header>
+    <h1>Macro Manager</h1>
+    <nav>
+    </nav>
+  </header>
+  <main>
+    <section class="macro-list">
+      <p>Calories per day:</p>
+      <input id="cals" />
+      <p>Protein grams/day:</p>
+      <input id="protein" />
+      <p>Carbohydrates grams/day:</p>
+      <input id="carbs" />
+      <p>Fats grams/day:</p>
+      <input id="fats" />
+      <button id="macros">Store Macros</button>
+      <div id="info">
+      </div>
+    </section>
+    <section class="food-list">
+      <p>Enter one food item. Input should contain the food and the amount being eaten.</p>
+      <p>(Examples: One large apple, two chicken breasts, 2 cups raw almonds, 8 ounces ground turkey)</p>
+      <input id="food" />
+      <button id="foodButton">Get nutrition info</button>
+      <div id="foodInfo"></div>
+    </section>
+  </main>
+
 </body>
 
 </html>
