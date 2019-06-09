@@ -51,6 +51,10 @@ const storeMacros = () => {
     alert('Please fill in all fields.')
     return;
   }
+  if (isNaN(cals.value) || isNaN(carbs.value) || isNaN(protein.value) || isNaN(fats.value)) {
+    alert('Please enter numbers only')
+    return;
+  }
   info.innerHTML = `
   <p>Calorie goals: ${0} out of ${cals.value}</p>
   <p>Protein goals: ${0} out of ${protein.value}</p>
