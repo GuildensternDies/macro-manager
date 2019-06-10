@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+}
+/* HEADER ELEMENTS */
+header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#plate {
+  position: relative;
+  text-align: center;
+}
+#plate img {
+  width: 80%;
+}
+#title {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 5em;
+  max-width: 20%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+nav a {
+font-size: 2em;
+text-decoration: none;
+}
+nav a img {
+  width: 35%;
+}
+
+/* INSTRUCTIONS SECTION */
+#instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  margin-top: 100px;
+}
+#pan {
+  position: relative;
+  text-align: center;
+}
+#pan p {
+  position: absolute;
+  top: 19%;
+  right: 19%;
+  max-width: 28%;
+}
+
+/* MACRO SECTION */
+#macro-list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 1.5em;
+  position: relative;
+  text-align: center;
+}
+#macro-list img {
+  width: 80%;
+}
+#macro-form {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  background-color: #EAE3CC;
+  padding: 0 10px 30px;
+  border-radius: 5%;
+}
+#macros {
+  display: block;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+#info {
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  background-color: #EAE3CC;
+  padding: 0 10px 30px;
+  border-radius: 5%;
+  width: 20%;
+  height: 43%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+/* FOOD SECTION */
+#food-list img {
+  width: 80%;
+}
+#food-list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 1.5em;
+}

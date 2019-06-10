@@ -6,31 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src='script.js'></script>
 </head>
 
 <body>
   <header>
-    <h1>Macro Manager</h1>
+    <div id="plate"><img src="plate.png">
+      <h1 id="title">Macro Manager</h1>
+    </div>
     <nav>
+      <a href="#instructions"><img src="fork.png">How it works</a>
+      <a href="#macro-list"><img src="knife.png">Try it!</a>
     </nav>
   </header>
   <main>
-    <section class="macro-list">
-      <p>Calories per day:</p>
-      <input id="cals" />
-      <p>Protein grams/day:</p>
-      <input id="protein" />
-      <p>Carbohydrates grams/day:</p>
-      <input id="carbs" />
-      <p>Fats grams/day:</p>
-      <input id="fats" />
-      <button id="macros">Store Macros</button>
-      <div id="info">
+    <section id="instructions">
+      <div id="pan">
+        <img src="pan.png">
+        <p>To use the macro manager, input your desired daily intake of each macronutrient. Then, search for a food in
+          the format listed to add its nutrient values to your daily goal!</p>
       </div>
     </section>
-    <section class="food-list">
+    <div id="macro-list">
+      <img src="tray.png">
+      <div id="macro-form">
+        <p>Calories per day:</p>
+        <input id="cals" />
+        <p>Protein grams/day:</p>
+        <input id="protein" />
+        <p>Carbohydrates grams/day:</p>
+        <input id="carbs" />
+        <p>Fats grams/day:</p>
+        <input id="fats" />
+        <button id="macros">Store Macros</button>
+      </div>
+      <div id="info">
+      </div>
+    </div>
+    <section id="food-list"><img src="tray.png">
       <p>Enter one food item. Input should contain the food and the amount being eaten.</p>
       <p>(Examples: One large apple, two chicken breasts, 2 cups raw almonds, 8 ounces ground turkey)</p>
       <input id="food" />
