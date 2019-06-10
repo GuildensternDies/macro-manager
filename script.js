@@ -11,7 +11,7 @@ const fats = document.querySelector('#fats');
 const info = document.querySelector('#info');
 const food = document.querySelector('#food');
 const foodButton = document.querySelector('#foodButton');
-const foodInfo = document.querySelector('#foodInfo');
+const foodInfo = document.querySelector('#food-info');
 let newCal = 0;
 let newPro = 0;
 let newCarb = 0;
@@ -30,20 +30,24 @@ const pullData = async () => {
   PROCNT ? newPro += PROCNT.quantity : newPro += 0;
   CHOCDF ? newCarb += CHOCDF.quantity : newCarb += 0;
   FAT ? newFat += FAT.quantity : newFat += 0;
-  foodInput += `${food.value}, `
+  if (foodInput == '') {
+    foodInput += `${food.value}`;
+  } else {
+    foodInput += `, ${food.value}`
+  }
   foodInfo.innerHTML = `
-  <p>Foods:${foodInput}</p>
-  <p>Calories: ${newCal}<p>
-  ${PROCNT ? `<p>Protein: ${Math.round(newPro)} grams<p>` : `<p>Protein: 0 grams</p>`}
-  ${CHOCDF ? `<p>Carbs: ${Math.round(newCarb)} grams<p>` : `<p>Carbs: 0 grams</p>`}
-  ${FAT ? `<p>Fats: ${Math.round(newFat)} grams<p>` : `<p>Fats: 0 grams</p>`}
+  <p>Foods: ${foodInput}</p>
+  <p>Calories: ${newCal}</p>
+  ${PROCNT ? `<p>Protein: ${Math.round(newPro)} grams</p>` : `<p>Protein: 0 grams</p>`}
+  ${CHOCDF ? `<p>Carbs: ${Math.round(newCarb)} grams</p>` : `<p>Carbs: 0 grams</p>`}
+  ${FAT ? `<p>Fats: ${Math.round(newFat)} grams</p>` : `<p>Fats: 0 grams</p>`}
   `;
   food.value = '';
   info.innerHTML = `
   <p>Calorie goals: ${newCal} out of ${cals.value}</p> 
-  <p>Protein goals: ${Math.round(newPro)} out of ${protein.value}</p>
-  <p>Carb goals: ${Math.round(newCarb)} out of ${carbs.value}</p>
-  <p>Fats goals: ${Math.round(newFat)} out of ${fats.value}</p>
+  <p>Protein goals: ${Math.round(newPro)} out of ${protein.value} grams</p>
+  <p>Carb goals: ${Math.round(newCarb)} out of ${carbs.value} grams</p>
+  <p>Fats goals: ${Math.round(newFat)} out of ${fats.value} grams</p>
   `
 }
 const storeMacros = () => {
@@ -57,9 +61,9 @@ const storeMacros = () => {
   }
   info.innerHTML = `
   <p>Calorie goals: ${0} out of ${cals.value}</p>
-  <p>Protein goals: ${0} out of ${protein.value}</p>
-  <p>Carb goals: ${0} out of ${carbs.value}</p>
-  <p>Fats goals: ${0} out of ${fats.value}</p>
+  <p>Protein goals: ${0} out of ${protein.value} grams</p>
+  <p>Carb goals: ${0} out of ${carbs.value} grams</p>
+  <p>Fats goals: ${0} out of ${fats.value} grams</p>
   `
 }
 

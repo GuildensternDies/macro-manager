@@ -1,5 +1,14 @@
+@font-face {
+  font-family: 'Bacon-Bad';
+  src: url('Bacon_Bad.woff') format('woff'),
+      url('Bacon_Bad.woff2') format('woff2'),
+      url('Bacon_Bad.ttf') format('truetype');
+}
+
+
 html {
   font-size: 16px;
+  background-image: url('background.jpg');
 }
 /* HEADER ELEMENTS */
 header {
@@ -23,13 +32,31 @@ header {
   max-width: 20%;
   text-align: center;
   transform: translate(-50%, -50%);
+  font-family: 'Bacon-Bad', Fallback, sans-serif;
+  color: #f65656;
 }
-nav a {
+#tablecloth {
+  position: relative;
+  text-align: center;
+}
+#tablecloth img {
+  width: 100%;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  /* Used shadow code from w3schools example, then modified */
+}
+#tablecloth a {
 font-size: 2em;
-text-decoration: none;
+color: black;
 }
-nav a img {
-  width: 35%;
+#works {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+#try {
+  position: absolute;
+  top: 40%;
+  right: 20%;
 }
 
 /* INSTRUCTIONS SECTION */
@@ -38,7 +65,7 @@ nav a img {
   flex-direction: column;
   align-items: center;
   font-size: 1.5em;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 #pan {
   position: relative;
@@ -49,6 +76,7 @@ nav a img {
   top: 19%;
   right: 19%;
   max-width: 28%;
+  color: white;
 }
 
 /* MACRO SECTION */
@@ -59,6 +87,8 @@ nav a img {
   font-size: 1.5em;
   position: relative;
   text-align: center;
+  margin-bottom: 30px;
+  margin-top: 200px;
 }
 #macro-list img {
   width: 80%;
@@ -66,7 +96,7 @@ nav a img {
 #macro-form {
   position: absolute;
   left: 25%;
-  top: 25%;
+  top: 12%;
   background-color: #EAE3CC;
   padding: 0 10px 30px;
   border-radius: 5%;
@@ -79,12 +109,12 @@ nav a img {
 #info {
   position: absolute;
   right: 25%;
-  top: 25%;
+  top: 12%;
   background-color: #EAE3CC;
   padding: 0 10px 30px;
   border-radius: 5%;
   width: 20%;
-  height: 43%;
+  height: 69%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -96,8 +126,36 @@ nav a img {
   width: 80%;
 }
 #food-list {
+  position: relative;
+  text-align: center;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  margin-top: 30px;
+
+}
+#food-form {
   font-size: 1.5em;
+  position: absolute;
+  left: 25%;
+  top: 12%;
+  background-color: #EAE3CC;
+  padding: 0 10px 30px;
+  border-radius: 5%;
+  width: 20%;
+  height: 70%;
+}
+#food-info {
+  position: absolute;
+  font-size: 1.5em;
+  right: 25%;
+  top: 12%;
+  background-color: #EAE3CC;
+  border-radius: 5%;
+  width: 20%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px 0;
 }
