@@ -179,6 +179,14 @@ font-family: 'Indie Flower', cursive;
   padding: 15px 5px;
   font-family: 'Indie Flower', cursive;
 }
+/* Clear button */
+#clear {
+  text-align: center;
+}
+#clear button {
+  padding: 3%;
+  border-radius: 100%;
+}
 
 /* Media queries */
 /* Smaller browser desktop */
