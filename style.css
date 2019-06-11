@@ -46,6 +46,7 @@ header {
 #tablecloth a {
 font-size: 2em;
 color: black;
+font-family: 'Indie Flower', cursive;
 }
 #works {
   position: absolute;
@@ -107,11 +108,15 @@ color: black;
   width: 20%;
   height: 69%;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+#macro-form p {
+  margin-bottom: 3%;
 }
 #macros {
   display: block;
-  margin-top: 50px;
-  margin-left: 80px;
+  margin-top: 10%;
+  margin-left: 35%;
 }
 #info {
   position: absolute;
@@ -126,6 +131,7 @@ color: black;
   flex-direction: column;
   justify-content: space-around;
   font-size: 1.2em;
+  font-family: 'Indie Flower', cursive;
 }
 
 
@@ -152,6 +158,7 @@ color: black;
   border-radius: 5%;
   width: 20%;
   height: 70%;
+  font-family: 'Indie Flower', cursive;
 }
 #food-info {
   position: absolute;
@@ -166,4 +173,29 @@ color: black;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 15px 5px;
+  font-family: 'Indie Flower', cursive;
+}
+
+
+/* Media queries */
+/* Smaller browser desktop */
+@media only screen
+and (max-width: 1320px) {
+  html {
+    font-size: 12px;
+  }
+  #pan p {
+    top: 25%;
+    right: 16%;
+  }
+  #tablecloth a {
+    font-size: 3em;
+  }
+  #title {
+    top: 42%;
+    left: 44%;
+  }
+  #info {
+    font-size: 1.3em;
+  }
 }
