@@ -59,11 +59,23 @@ const storeMacros = () => {
     alert('Please enter numbers only')
     return;
   }
+  localStorage.setItem("Calories", `${cals.value}`);
+  localStorage.setItem("Protein", `${protein.value}`);
+  localStorage.setItem("Carbs", `${carbs.value}`);
+  localStorage.setItem("Fats", `${fats.value}`);
+  const keyCl = localStorage.key(0);
+  const keyP = localStorage.key(1);
+  const keyCr = localStorage.key(2);
+  const keyF = localStorage.key(3);
+  const localCal = localStorage.getItem(keyCl);
+  const localP = localStorage.getItem(keyP);
+  const localCar = localStorage.getItem(keyCr);
+  const localF = localStorage.getItem(keyF);
   info.innerHTML = `
-  <p>Calorie goals: ${0} out of ${cals.value}</p>
-  <p>Protein goals: ${0} out of ${protein.value} grams</p>
-  <p>Carb goals: ${0} out of ${carbs.value} grams</p>
-  <p>Fats goals: ${0} out of ${fats.value} grams</p>
+  <p>Calorie goals: ${0} out of ${localCal}</p>
+  <p>Protein goals: ${0} out of ${localP} grams</p>
+  <p>Carb goals: ${0} out of ${localCar} grams</p>
+  <p>Fats goals: ${0} out of ${localF} grams</p>
   `
 }
 

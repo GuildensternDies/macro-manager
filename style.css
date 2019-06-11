@@ -4,13 +4,6 @@
       url('Bacon_Bad.woff2') format('woff2'),
       url('Bacon_Bad.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'Countryside';
-  src: url('Countryside.woff') format('woff'),
-      url('Countryside.woff2') format('woff2'),
-      url('Countryside.ttf') format('truetype');
-}
-
 
 html {
   font-size: 16px;
@@ -82,11 +75,12 @@ color: black;
 }
 #pan p {
   position: absolute;
-  top: 12%;
-  right: 14%;
-  max-width: 40%;
-  color: white;
-  font-family: 'Countryside';
+  top: 15%;
+  right: 16%;
+  max-width: 35%;
+  color: #E6DBA0;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1em;
 }
 
 /* MACRO SECTION */
@@ -131,6 +125,7 @@ color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-size: 1.2em;
 }
 
 
@@ -170,5 +165,5 @@ color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 15px 0;
+  padding: 15px 5px;
 }
