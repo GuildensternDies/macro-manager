@@ -13,6 +13,10 @@ const food = document.querySelector('#food');
 const foodButton = document.querySelector('#foodButton');
 const foodInfo = document.querySelector('#food-info');
 const restart = document.querySelector('#restart');
+const burger = document.querySelector('#burger');
+const lettuce = document.querySelector('#lettuce');
+const worksLink = document.querySelector('#works');
+const tryLink = document.querySelector('#try');
 let newCal = 0;
 let newPro = 0;
 let newCarb = 0;
@@ -115,7 +119,23 @@ const clearStorage = () => {
   localStorage.clear();
   window.location.reload();
 }
+const makeBurger = () => {
+  burger.style.display = "block";
+}
+const makeLettuce = () => {
+  lettuce.style.display = "block";
+}
+const eatBurger = () => {
+  burger.style.display = "none";
+}
+const eatLettuce = () => {
+  lettuce.style.display = "none";
+}
 
 macroButton.addEventListener('click', storeMacros);
 foodButton.addEventListener('click', pullData);
 restart.addEventListener('click', clearStorage);
+worksLink.addEventListener('mouseover', makeBurger);
+tryLink.addEventListener('mouseover', makeLettuce);
+worksLink.addEventListener('mouseleave', eatBurger);
+tryLink.addEventListener('mouseleave', eatLettuce);

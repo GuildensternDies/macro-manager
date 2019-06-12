@@ -11,11 +11,11 @@ html {
 }
 body {
   margin: 0;
-  margin-bottom: 100px;
 }
+
 /* HEADER ELEMENTS */
 header {
-  margin-top: 10px;
+  margin-top: 130px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,6 +23,7 @@ header {
 #plate {
   position: relative;
   text-align: center;
+  margin-bottom: 20px;
 }
 #plate img {
   width: 80%;
@@ -46,6 +47,20 @@ header {
   width: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   /* Used shadow code from w3schools example, then modified */
+}
+#burger {
+  max-width: 5%;
+  position: absolute;
+  top: 40%;
+  left: 14%;
+  display: none;
+}
+#lettuce {
+  max-width: 5%;
+  position: absolute;
+  top: 40%;
+  right: 14%;
+  display: none;
 }
 #tablecloth a {
 font-size: 2em;
@@ -186,6 +201,12 @@ font-family: 'Indie Flower', cursive;
 #clear button {
   padding: 3%;
   border-radius: 100%;
+}
+footer {
+  font-size: 1em;
+  text-align: center;
+  background-color: #E6DBA0;
+  margin-top: 100px;
 }
 
 /* Media queries */
