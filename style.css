@@ -136,6 +136,10 @@ font-family: 'Indie Flower', cursive;
   display: block;
   margin-top: 10%;
   margin-left: 35%;
+  cursor: pointer;
+}
+#macros:hover {
+  cursor: pointer;
 }
 #info {
   position: absolute;
@@ -194,6 +198,12 @@ font-family: 'Indie Flower', cursive;
   padding: 15px 5px;
   font-family: 'Indie Flower', cursive;
 }
+#foodButton {
+  cursor: pointer;
+}
+#foodButton:hover {
+  cursor: pointer;
+}
 /* Clear button */
 #clear {
   text-align: center;
@@ -201,6 +211,10 @@ font-family: 'Indie Flower', cursive;
 #clear button {
   padding: 3%;
   border-radius: 100%;
+  cursor: pointer;
+}
+#clear button:hover {
+  cursor: pointer;
 }
 footer {
   font-size: 1em;
