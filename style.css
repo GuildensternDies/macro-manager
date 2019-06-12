@@ -320,7 +320,7 @@ and (max-width: 375px){
     overflow: hidden;
   }
   #macro-list img,  #food-list img {
-    width: 120%;
+    width: 130%;
     margin-left: -10%;
   }
   #macro-list button {
@@ -331,19 +331,22 @@ and (max-width: 375px){
     border-radius: 5px;
   }
   #macro-form, #info, #food-form, #food-info {
-    width: 38%;
-    font-size: 1.2em;
+    width: 40%;
+    font-size: 1em;
     top: 10%;
-    line-height: 1.2;
+    line-height: 1.1;
   }
   #food-info {
     padding: 0 10px 30px 10px;
   }
   #macro-form, #food-form {
-    left: 5%;
+    left: 4%;
   }
   
   #info, #food-info {
-    right: 5%;
+    right: 4%;
+  }
+  #restart {
+    background-color: #E6DBA0;
   }
 }
