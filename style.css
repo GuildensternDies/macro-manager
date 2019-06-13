@@ -222,6 +222,13 @@ footer {
   background-color: #E6DBA0;
   margin-top: 100px;
 }
+/* Color changer */
+.green {
+  color: #72BA16;
+}
+.red {
+  color: #BA1616
+}
 
 /* Media queries */
 /* Smaller browser desktop */

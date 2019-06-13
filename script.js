@@ -33,11 +33,40 @@ const localNCar = localStorage.getItem('NewCarb');
 const localNF = localStorage.getItem('NewFat');
 if (typeof localCal === 'string' && typeof localFood === 'string') {
   info.innerHTML = `
-    <p>Calorie goals: ${localNCal} out of ${localCal}</p>
-    <p>Protein goals: ${localNP} out of ${localP} grams</p>
-    <p>Carb goals: ${localNCar} out of ${localCar} grams</p>
-    <p>Fats goals: ${localNF} out of ${localF} grams</p>
+    <p id='calP'>Calorie goals: ${localNCal} out of ${localCal}</p>
+    <p id='proP'>Protein goals: ${localNP} out of ${localP} grams</p>
+    <p id='carP'>Carb goals: ${localNCar} out of ${localCar} grams</p>
+    <p id='fatP'>Fats goals: ${localNF} out of ${localF} grams</p>
   `
+  const calP = document.querySelector('#calP');
+  const proP = document.querySelector('#proP');
+  const carP = document.querySelector('#carP');
+  const fatP = document.querySelector('#fatP');
+  if (Number(localNCal) > Number(localCal)) {
+    calP.classList.add("green");
+  }
+  if (Number(localNP) > Number(localP)) {
+    proP.classList.add("green");
+  }
+  if (Number(localNCar) > Number(localCar)) {
+    carP.classList.add("green");
+  }
+  if (Number(localNF) > Number(localF)) {
+    fatP.classList.add("green");
+  }
+  if (Number(localNCal) > (1.5 * Number(localCal))) {
+    calP.classList.add("red");
+  }
+  if (Number(localNP) > (1.5 * Number(localP))) {
+    proP.classList.add("red");
+  }
+  if (Number(localNCar) > (1.5 * Number(localCar))) {
+    carP.classList.add("red");
+  }
+  if (Number(localNF) > (1.5 * Number(localF))) {
+    fatP.classList.add("red");
+  }
+
 } else if (typeof localCal === 'string') {
   info.innerHTML = `
     <p>Calorie goals: ${0} out of ${localCal}</p>
@@ -48,6 +77,7 @@ if (typeof localCal === 'string' && typeof localFood === 'string') {
 } else {
   info.innerHTML = '';
 }
+
 
 const pullData = async () => {
   if (info.innerHTML === '') {
@@ -71,6 +101,10 @@ const pullData = async () => {
   localStorage.setItem('NewPro', `${Math.round(newPro)}`);
   localStorage.setItem('NewCarb', `${Math.round(newCarb)}`)
   localStorage.setItem('NewFat', `${Math.round(newFat)}`)
+  const localCal = localStorage.getItem("Calories");
+  const localP = localStorage.getItem("Protein");
+  const localCar = localStorage.getItem("Carbs");
+  const localF = localStorage.getItem("Fats");
   const localFood = localStorage.getItem('FoodInput');
   const localNCal = localStorage.getItem('NewCal');
   const localNP = localStorage.getItem('NewPro');
@@ -85,12 +119,40 @@ const pullData = async () => {
   `;
   food.value = '';
   info.innerHTML = `
-    <p>Calorie goals: ${newCal} out of ${cals.value}</p>
-    <p>Protein goals: ${Math.round(newPro)} out of ${protein.value} grams</p>
-    <p>Carb goals: ${Math.round(newCarb)} out of ${carbs.value} grams</p>
-    <p>Fats goals: ${Math.round(newFat)} out of ${fats.value} grams</p>
+    <p id='calP'>Calorie goals: ${newCal} out of ${cals.value}</p>
+    <p id='proP'>Protein goals: ${Math.round(newPro)} out of ${protein.value} grams</p>
+    <p id='carP'>Carb goals: ${Math.round(newCarb)} out of ${carbs.value} grams</p>
+    <p id='fatP'>Fats goals: ${Math.round(newFat)} out of ${fats.value} grams</p>
   `
-}
+  const calP = document.querySelector('#calP');
+  const proP = document.querySelector('#proP');
+  const carP = document.querySelector('#carP');
+  const fatP = document.querySelector('#fatP');
+  if (Number(localNCal) > Number(localCal)) {
+    calP.classList.add("green");
+  }
+  if (Number(localNP) > Number(localP)) {
+    proP.classList.add("green");
+  }
+  if (Number(localNCar) > Number(localCar)) {
+    carP.classList.add("green");
+  }
+  if (Number(localNF) > Number(localF)) {
+    fatP.classList.add("green");
+  }
+  if (Number(localNCal) > (1.5 * Number(localCal))) {
+    calP.classList.add("red");
+  }
+  if (Number(localNP) > (1.5 * Number(localP))) {
+    proP.classList.add("red");
+  }
+  if (Number(localNCar) > (1.5 * Number(localCar))) {
+    carP.classList.add("red");
+  }
+  if (Number(localNF) > (1.5 * Number(localF))) {
+    fatP.classList.add("red");
+  }
+};
 const storeMacros = () => {
   if (cals.value === '' || protein.value === '' || carbs.value === '' || fats.value === '') {
     alert('Please fill in all fields.')
