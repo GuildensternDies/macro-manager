@@ -1,4 +1,4 @@
-
+// Define all needed variables
 const PATH = 'https://api.edamam.com/api/nutrition-data';
 const APP_ID = '4595eb4a';
 const APP_KEY = '7729cdb5d62a9d271ec1ed70c865f4df'
@@ -31,6 +31,7 @@ const localNCal = localStorage.getItem('NewCal');
 const localNP = localStorage.getItem('NewPro');
 const localNCar = localStorage.getItem('NewCarb');
 const localNF = localStorage.getItem('NewFat');
+// Pull and display any local storage, if it exists
 if (typeof localCal === 'string' && typeof localFood === 'string') {
   info.innerHTML = `
     <p id='calP'>Calorie goals: ${localNCal} out of ${localCal}</p>
@@ -78,7 +79,7 @@ if (typeof localCal === 'string' && typeof localFood === 'string') {
   info.innerHTML = '';
 }
 
-
+// Function for food data from api call and updating goals
 const pullData = async () => {
   if (info.innerHTML === '') {
     alert('Please enter your macro goals first!')
@@ -92,7 +93,7 @@ const pullData = async () => {
   CHOCDF ? newCarb += CHOCDF.quantity : newCarb += 0;
   FAT ? newFat += FAT.quantity : newFat += 0;
   if (foodInput == '') {
-    foodInput += `${food.value} `;
+    foodInput += `${food.value}`;
   } else {
     foodInput += `, ${food.value} `
   }
@@ -153,6 +154,7 @@ const pullData = async () => {
     fatP.classList.add("red");
   }
 };
+// Function for setting macro goals
 const storeMacros = () => {
   if (cals.value === '' || protein.value === '' || carbs.value === '' || fats.value === '') {
     alert('Please fill in all fields.')
@@ -177,6 +179,7 @@ const storeMacros = () => {
     <p>Fats goals: ${0} out of ${localF} grams</p>
   `
 }
+// Storage clear and nav hover functions
 const clearStorage = () => {
   localStorage.clear();
   window.location.reload();
@@ -193,7 +196,7 @@ const eatBurger = () => {
 const eatLettuce = () => {
   lettuce.style.display = "none";
 }
-
+// Event listeners
 macroButton.addEventListener('click', storeMacros);
 foodButton.addEventListener('click', pullData);
 restart.addEventListener('click', clearStorage);
